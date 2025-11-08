@@ -1,0 +1,13 @@
+# Node / build
+node_modules
+dist
+coverage
+
+# Env / OS / editor
+.env
+.DS_Store
+*.log
+*.save
+
+# Local artifacts
+recent_orders.csv
