@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "Order Exec Engine",
+    "_postman_id": "abcdef12-3456-7890-abcd-ef1234567890",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Market Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/orders/execute",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "orders",
+            "execute"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"type\": \"market\", \"tokenIn\": \"SOL\", \"tokenOut\": \"USDC\", \"amount\": 1.25, \"maxSlippageBps\": 100}"
+        }
+      }
+    }
+  ]
+}

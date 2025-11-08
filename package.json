@@ -1,0 +1,28 @@
+{
+  "name": "order-exec-engine",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "test": "jest --runInBand",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fastify/websocket": "^8.0.0",
+    "bullmq": "^5.0.0",
+    "fastify": "^4.28.1",
+    "ioredis": "^5.4.2",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.12",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.15.7",
+    "typescript": "^5.4.5"
+  }
+}
