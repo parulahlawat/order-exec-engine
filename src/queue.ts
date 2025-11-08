@@ -5,7 +5,11 @@ import { emit } from "./stream.js";
 import { patchOrder } from "./db.js";
 import { MockDexRouter } from "./mockDexRouter.js";
 
-const connection = new IORedis(env.REDIS_URL);
+const connection = new IORedis(env.REDIS_URL, {
+  // Required by BullMQ for blocking ops
+  maxRetriesPerRequest: null,
+  enableReadyCheck: false,
+});
 export const ordersQ = new Queue("orders", {
   connection,
   defaultJobOptions: {
